@@ -1,0 +1,11 @@
+flask
+qiskit
+qiskit-ibm-runtime
+qiskit-aer
+qiskit-aqua
+qiskit-ibmq-provider
+qiskit-ignis
+qiskit-terra
+sqlalchemy
+flask_sqlalchemy
+
