@@ -1,3 +1,5 @@
+version: 2.1
+
 jobs:
   build:
     docker:
@@ -8,7 +10,7 @@ jobs:
           name: Install dependencies
           command: |
             python -m pip install --upgrade pip
-            pip install -r synergy/synergy/requirements.txt
+            pip install .
       - run:
           name: Lint code
           command: |
