@@ -1,0 +1,13 @@
+dotenv
+qiskit
+qiskit-ibm-runtime
+qiskit-aqua
+tensorflow
+numpy
+matplotlib
+pandas
+scipy
+qiskit_ionq
+cirq
+cuda
+requests

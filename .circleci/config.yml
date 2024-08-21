@@ -9,16 +9,15 @@ jobs:
       - run:
           name: Verify setup.py file
           command: |
-            if [ ! -f synergy/synergy/setup.py ]; then
+            if [ ! -f setup.py ]; then
               echo "setup.py not found!"
               exit 1
             fi
       - run:
           name: Install dependencies
           command: |
-            cd synergy/synergy
-            python -m pip install --upgrade pip
-            pip install .
+            python -m pip install --upgrade pip setuptools wheel
+            pip install --use-pep517 .
       - run:
           name: Lint code
           command: |
