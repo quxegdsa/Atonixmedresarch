@@ -4,21 +4,31 @@ orbs:
   python: circleci/python@2.1.1
 
 jobs:
-  build-and-test:
+  synergypro:
     docker:
       - image: cimg/python:3.12
-
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
-
+      - run:
+          name: Update pip, setuptools, and wheel
+          command: |
+            python -m pip install --upgrade pip setuptools wheel
+      - run:
+          name: Install dependencies
+          command: |
+            pip install -r requirements.txt
+      - run:
+          name: Lint code
+          command: |
+            pip install flake8
+            flake8 .
       - run:
           name: Run tests
-
-          command: pytest
+          command: |
+            pytest
 
 workflows:
-  synergy:
+  version: 2
+  build_and_test:
     jobs:
-      - build-and-test
+      - synergypro
