@@ -1,4 +1,5 @@
 flask
+dotenv
 qiskit
 qiskit-ibm-runtime
 qiskit-aer
@@ -8,4 +9,5 @@ qiskit-ignis
 qiskit-terra
 sqlalchemy
 flask_sqlalchemy
+qiskit_ionq
 
