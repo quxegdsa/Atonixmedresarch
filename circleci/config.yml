@@ -1,0 +1,28 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+      - run:
+          name: Lint code
+          command: |
+            pip install flake8
+            flake8 .
+      - run:
+          name: Run tests
+          command: |
+            pytest
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
