@@ -32,15 +32,6 @@ The integration of quantum machine learning into personalized medicine represent
 We envision a future where healthcare is not only more efficient but also more humane—where treatment plans are designed with the individual in mind, significantly improving health outcomes and patient experiences.
 
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-## Acknowledgments
-
-We would like to thank IBM for their support and resources in quantum computing, as well as the healthcare community for their continued collaboration and insights. Your contributions are invaluable in driving forward the possibilities of personalized medicine.
-
----
 
 Together, let's pioneer the future of personalized healthcare through the innovative application of quantum machine learning.
 ```
