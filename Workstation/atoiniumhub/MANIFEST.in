@@ -1,0 +1,4 @@
+include README.md
+include requirements.txt
+recursive-include atoiniumapp/static *
+recursive-include atoiniumapp/templates *
