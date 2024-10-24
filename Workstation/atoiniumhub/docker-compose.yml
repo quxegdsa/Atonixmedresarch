@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  my_service:
+    image: atoinum:latest
+    volumes:
+      - /path/on/host:/path/in/container
+    container_name: atoinum
+
+volumes:
+  atoinum_data:
+    driver: local

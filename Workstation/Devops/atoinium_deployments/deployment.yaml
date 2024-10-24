@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atoinium-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: atoinium
+  template:
+    metadata:
+      labels:
+        app: atoinium
+    spec:
+      containers:
+        - name: atoinium
+          image: ofidohubvm/atoinium:latest
+          ports:
+            - containerPort: 80
